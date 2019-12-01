@@ -15,6 +15,8 @@ class db_connection:
         app.config["MYSQL_USER"] = "root"
         app.config["MYSQL_PASSWORD"] = "Dunno11pass"
         app.config["MYSQL_DB"] = "said_dev"
+        # For calling methods to execute queries - specifying a cursor type
+        app.config["MYSQL_CURSORCLASS"] = "DictCursor"   
 
         return mysql
 
@@ -25,7 +27,7 @@ class db_connection:
 
             cur.execute("SELECT * FROM songs")
 
-            songs = list(cur.fetchall())
+            songs = cur.fetchall()
 
             cur.close()
 
