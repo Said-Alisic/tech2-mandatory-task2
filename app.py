@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from db import db_connection
 
 app = Flask(__name__)
@@ -6,13 +6,20 @@ app = Flask(__name__)
 db = db_connection()
 connection = db.connect_to_db(app)
 
-@app.route('/cars')
-def get_cars():
 
-    cars = db.get_cars(connection)
+@app.route('/songs')
+def get_songs():
 
-    return jsonify({'cars' : cars})
+    songs = db.get_songs(connection)
+    print(songs)
+
+    return render_template("songs.html", songs=songs)
     
+
+@app.route('/')
+def home():
+
+    return render_template("home.html")
 
 
 if __name__ == "__main__":

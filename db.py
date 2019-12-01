@@ -14,20 +14,20 @@ class db_connection:
         app.config["MYSQL_HOST"] = "localhost"
         app.config["MYSQL_USER"] = "root"
         app.config["MYSQL_PASSWORD"] = "Dunno11pass"
-        app.config["MYSQL_DB"] = "icar"
+        app.config["MYSQL_DB"] = "said_dev"
 
         return mysql
 
 
-    def get_cars(self, mysql):
+    def get_songs(self, mysql):
             # create cursor to be able to query the db
             cur = mysql.connection.cursor()
 
-            cur.execute("SELECT * FROM cars")
+            cur.execute("SELECT * FROM songs")
 
-            cars = list(cur.fetchall())
+            songs = list(cur.fetchall())
 
             cur.close()
 
-            return cars
+            return songs
 
