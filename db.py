@@ -11,10 +11,16 @@ class db_connection:
         mysql = MySQL(app)
 
     # Config MySQL
-        app.config["MYSQL_HOST"] = "localhost"
-        app.config["MYSQL_USER"] = "root"
-        app.config["MYSQL_PASSWORD"] = "Dunno11pass"
-        app.config["MYSQL_DB"] = "said_dev"
+        app.config["MYSQL_HOST"] = "sql2.freemysqlhosting.net"
+        app.config["MYSQL_USER"] = "sql2314040"
+        app.config["MYSQL_PASSWORD"] = "zM1!lP5%"
+        app.config["MYSQL_DB"] = "sql2314040"
+    
+    # Locally
+    #    app.config["MYSQL_HOST"] = "localhost"
+    #    app.config["MYSQL_USER"] = "root"
+    #    app.config["MYSQL_PASSWORD"] = "Dunno11pass"
+    #    app.config["MYSQL_DB"] = "said_dev"
         # For calling methods to execute queries - specifying a cursor type
         app.config["MYSQL_CURSORCLASS"] = "DictCursor"   
 
