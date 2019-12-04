@@ -1,6 +1,6 @@
 from flask import Flask
 #from flask_mysqldb import MySQL
-import mysql.connector
+from mysql import connector
 
 
 class db_connection:
@@ -27,7 +27,7 @@ class db_connection:
 
     # Using plain python
 
-        cnx = mysql.connector.connect(user='root', password='Dunno11pass',
+        cnx = connector.connect(user='root', password='Dunno11pass',
                               host='127.0.0.1',
                               database='said_dev')
 
