@@ -4,8 +4,8 @@ from db import db_connection
 app = Flask(__name__)
 
 db = db_connection()
-connection = db.connect_to_db(app)
-
+#connection = db.connect_to_db(app)
+connection = db.connect_to_db()
 
 @app.route('/songs')
 def get_songs():
