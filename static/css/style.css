@@ -1,20 +1,18 @@
-*{
+* {
 	margin:0px;
 	padding: 0px;
 	background-color: #000029;
 	color: white;
 }
 
-h1{
+h1 {
 	margin: 10px;
 }
 
-.song-list {
 
-}
-ul{
+ul {
 	list-style-type: none;
 }
-li{
+li {
 	margin: 5px;
 }
