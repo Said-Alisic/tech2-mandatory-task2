@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Songs</title>
+	
+	<link rel="stylesheet" href="style/style.css">
+	
 </head>
 <body>
-    <div>
+    <div class="song-list" align="center">
         <h1>Songs</h1>
         <ul>
             {% for song in songs %}
@@ -13,5 +16,6 @@
             {% endfor %}
         </ul>
     </div>
+	
 </body>
 </html>
