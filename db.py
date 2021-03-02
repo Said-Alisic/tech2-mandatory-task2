@@ -16,11 +16,6 @@ class db_connection:
         app.config["MYSQL_PASSWORD"] = "tech2-password"
         app.config["MYSQL_DB"] = "tech2"
     
-    # Locally
-    #    app.config["MYSQL_HOST"] = "localhost"
-    #    app.config["MYSQL_USER"] = "root"
-    #    app.config["MYSQL_PASSWORD"] = "Dunno11pass"
-    #    app.config["MYSQL_DB"] = "said_dev"
 
     # For calling methods to execute queries - specifying a cursor type
         app.config["MYSQL_CURSORCLASS"] = "DictCursor"   
